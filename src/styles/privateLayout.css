@@ -1,0 +1,40 @@
+#main-container {
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  width: 100%;
+  min-height: 50px;
+  background-color: #064663;
+  position: sticky;
+  top: 0;
+  color: #ece7e7;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-menu {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logout-button {
+  background-color: #c84b31;
+  color: #ece7e7;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: #ece7e7;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}

@@ -10,7 +10,9 @@ const Registro = () => {
 
   const [registro, { data, loading, error }] = useMutation(CREATE_USUARIO);
 
-  if (error) toast.error('Error en el registro');
+  if (error) {
+    toast.error('Error en el registro');
+  }
   if (loading) {
     return <div>Registrando...</div>;
   }

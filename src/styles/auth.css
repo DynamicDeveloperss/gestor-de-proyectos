@@ -1,0 +1,68 @@
+/* Estilos para layout de autenticacion */
+#auth-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #041c32;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 1px solid #c8c6c6;
+  border-radius: 10px;
+  width: 300px;
+  height: 20px;
+  margin: 10px;
+}
+
+.input-form input {
+  width: 100%;
+  height: 100%;
+  margin: 3px;
+  font-size: 16px;
+}
+
+.input-form > i {
+  color: #04293a;
+}
+
+.link {
+  color: #01298b;
+}
+
+.button {
+  margin: 10px;
+  width: 250px;
+  height: 35px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #345b63;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.auth-form {
+  background-color: #ffffff;
+  opacity: 0.97;
+  width: 400px;
+  height: 500px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}

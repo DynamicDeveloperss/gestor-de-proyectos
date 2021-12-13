@@ -15,7 +15,7 @@ const Header = () => {
           </i>
         </li>
         <li>
-          <Link to={'/'} className="nav-link">
+          <Link to={'proyectos'} className="nav-link">
             Proyectos
           </Link>
         </li>
@@ -34,7 +34,7 @@ const Header = () => {
         <li>Nombre Usuario</li>
         <li>
           <button className="logout-button">
-            Cerrar Sesión <i class="fas fa-sign-out-alt"></i>
+            Cerrar Sesión <i className="fas fa-sign-out-alt"></i>
           </button>
         </li>
       </ul>

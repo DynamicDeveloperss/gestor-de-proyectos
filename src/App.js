@@ -4,7 +4,8 @@ import Login from './pages/Login';
 import Registro from './pages/Registro';
 import PrivateLayout from './layouts/PrivateLayout';
 import Usuarios from './pages/Usuarios';
-import EditarUsuario from './pages/EditarUsuario';
+// import EditarUsuario from './pages/EditarUsuario';
+import Proyectos from './pages/Proyectos';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         </Route>
         <Route path="main" element={<PrivateLayout />}>
           <Route path="usuarios" element={<Usuarios />} />
-          <Route path="usuarios/:id" element={<EditarUsuario />} />
+          <Route path="proyectos" element={<Proyectos />} />
         </Route>
       </Routes>
     </Router>

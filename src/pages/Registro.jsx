@@ -1,21 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { CREATE_USUARIO } from '../graphql/usuario/mutations';
+import { REGISTRO } from '../graphql/auth/mutation';
 import '../styles/auth.css';
 
 const Registro = () => {
   const form = useRef(null);
 
-  const [registro, { data, loading, error }] = useMutation(CREATE_USUARIO);
+  const [registro, { data }] = useMutation(REGISTRO);
 
-  if (error) {
-    toast.error('Error en el registro');
-  }
-  if (loading) {
-    return <div>Registrando...</div>;
-  }
+  useEffect(() => {
+    console.log('data: ', data);
+    if (data) {
+      if (data.registro.token) {
+        localStorage.setItem('token', data.registro.token);
+      }
+    }
+  }, [data]);
 
   const crearUsuario = (e) => {
     e.preventDefault();
@@ -27,13 +29,13 @@ const Registro = () => {
     registro({ variables: nuevoUsuario })
       .then(() => {
         toast.success('Registro Exitoso', { duration: 4000 });
-        console.log(data);
       })
       .catch((error) => {
         console.error(error);
       });
     e.target.reset();
   };
+
   return (
     <form ref={form} onSubmit={crearUsuario} className="auth-form">
       <h2>Crea tu cuenta!</h2>

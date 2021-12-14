@@ -13,3 +13,12 @@ export const REGISTRO = gql`
     }
   }
 `;
+
+export const LOGIN = gql`
+  mutation Login($correo: String!, $password: String!) {
+    login(correo: $correo, password: $password) {
+      token
+      error
+    }
+  }
+`;
